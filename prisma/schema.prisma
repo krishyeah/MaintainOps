@@ -14,8 +14,23 @@ datasource db {
 }
 
 model Equipment {
-    id          String      @id @default(cuid())
-    name        String      
-    createdAt   DateTime    @default(now())
-    updatedAt   DateTime    @updatedAt
+  id           String   @id @default(cuid())
+  name         String
+  assetTag     String   @unique
+  location     String
+  category     String
+  criticality  Int
+  status       String   @default("active")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Technician {
+  id        String   @id @default(cuid())
+  name      String
+  email     String   @unique
+  skills    String[]
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
