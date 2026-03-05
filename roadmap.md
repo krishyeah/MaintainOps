@@ -31,7 +31,7 @@
 
 ## 0.5 Seed script (minimal data)
 
-- [ ] Create scripts/seed.ts to insert 2 equipment + 2 technicians
+- [x] Create scripts/seed.ts to insert 2 equipment + 2 technicians
 
 **DoD**: Running seed results in rows in DB; app lists them (even if basic).
 
